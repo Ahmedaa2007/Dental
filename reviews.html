@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Reviews - Dr. Ann Ashraf Abdelmoghith</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <div class="logo-icon">🦷</div>
+                    <span class="logo-text">Dr. Ann Ashraf</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="prices.html" class="nav-link">Services</a></li>
+                    <li><a href="book.html" class="nav-link">Book</a></li>
+                    <li><a href="reviews.html" class="nav-link active">Reviews</a></li>
+                </ul>
+                <div class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="page-header">
+                <h1 class="page-title">Patient Reviews</h1>
+                <p class="page-description">What our patients say about their experience</p>
+            </div>
+
+            <div class="reviews-stats">
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="stat-number" id="averageRating">5.0</div>
+                        <div class="stat-label">Average Rating</div>
+                        <div class="stars" id="averageStars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="totalReviews">0</div>
+                        <div class="stat-label">Total Reviews</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Satisfaction Rate</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reviews-container">
+                <div class="reviews-grid" id="reviewsGrid">
+                    <!-- Reviews will be loaded dynamically -->
+                </div>
+
+                <div class="reviews-pagination" id="reviewsPagination">
+                    <!-- Pagination will be added if needed -->
+                </div>
+
+                <div class="reviews-empty" id="reviewsEmpty" style="display: none;">
+                    <div class="empty-state">
+                        <div class="empty-icon">💭</div>
+                        <h3 class="empty-title">No Reviews Yet</h3>
+                        <p class="empty-description">Be the first to share your experience with Dr. Ann Ashraf!</p>
+                        <a href="book.html" class="btn btn-primary">Book Appointment</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-form-section">
+                <h2 class="section-title">Leave a Review</h2>
+                <div class="review-form-container">
+                    <form id="reviewForm" class="review-form">
+                        <div class="form-group">
+                            <label for="reviewerName" class="form-label">Your Name</label>
+                            <input type="text" id="reviewerName" name="reviewerName" class="form-input" required>
+                            <div class="form-checkbox">
+                                <input type="checkbox" id="anonymous" name="anonymous">
+                                <label for="anonymous">Submit anonymously</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="reviewerEmail" class="form-label">Email Address</label>
+                            <input type="email" id="reviewerEmail" name="reviewerEmail" class="form-input" required>
+                            <div class="form-help">Email will be used to verify your appointment history</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Rating</label>
+                            <div class="rating-input" id="ratingInput">
+                                <span class="star-input" data-rating="1">★</span>
+                                <span class="star-input" data-rating="2">★</span>
+                                <span class="star-input" data-rating="3">★</span>
+                                <span class="star-input" data-rating="4">★</span>
+                                <span class="star-input" data-rating="5">★</span>
+                            </div>
+                            <input type="hidden" id="rating" name="rating" value="5">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="reviewText" class="form-label">Your Review</label>
+                            <textarea id="reviewText" name="reviewText" class="form-textarea" rows="4" placeholder="Share your experience with Dr. Ann Ashraf..." required></textarea>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Submit Review</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="logo-icon">🦷</div>
+                        <span class="logo-text">Dr. Ann Ashraf</span>
+                    </div>
+                    <p class="footer-description">
+                        Providing exceptional dental care with modern techniques and personalized attention.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="prices.html">Services</a></li>
+                        <li><a href="book.html">Book Appointment</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Contact</h4>
+                    <ul class="footer-contact">
+                        <li>📞 +20 1234567890</li>
+                        <li>📧 info@drannashraf.com</li>
+                        <li>📍 Cairo, Egypt</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Dr. Ann Ashraf Abdelmoghith. All rights reserved. Built with ❤️ in Egypt.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/reviews.js"></script>
+</body>
+</html>
