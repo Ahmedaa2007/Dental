@@ -1,5 +1,8 @@
 // Main JavaScript file for the dental clinic website
 
+// Backend API configuration
+const BACKEND_BASE_URL = 'http://localhost:5000';
+
 // Initialize the application
 document.addEventListener('DOMContentLoaded', function() {
     initializeApp();
@@ -48,8 +51,7 @@ async function loadRecentReviews() {
     if (!reviewsContainer) return;
     
     try {
-        const response = await fetch('/api/reviews?limit=3');
-        const reviews = await response.json();
+        const reviews = await window.dentalClinic.apiRequest('/api/reviews?limit=3');
         
         if (reviews.length === 0) {
             reviewsContainer.innerHTML = `
@@ -256,8 +258,11 @@ async function apiRequest(endpoint, options = {}) {
     
     const config = { ...defaultOptions, ...options };
     
+    // Prepend backend base URL to endpoint
+    const fullUrl = BACKEND_BASE_URL + endpoint;
+    
     try {
-        const response = await fetch(endpoint, config);
+        const response = await fetch(fullUrl, config);
         
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
