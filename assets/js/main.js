@@ -1,7 +1,7 @@
 // Main JavaScript file for the dental clinic website
 
 // Backend API configuration
-const BACKEND_BASE_URL = 'http://localhost:5000';
+const BACKEND_BASE_URL = 'https://localhost:5000';
 
 // Initialize the application
 document.addEventListener('DOMContentLoaded', function() {
