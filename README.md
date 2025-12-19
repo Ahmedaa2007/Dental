@@ -12,7 +12,7 @@ SmileCraft Dentistry is a multi-language dental practice platform that combines 
 - Real-time currency system with admin-controlled base currency, API-driven exchange rates, and local preference persistence.
 - Role-based admin dashboard covering calendar, pricing, communications, and security controls with audit logging.
 - Patient portal for appointment history, documents, and treatment plan visualization.
-- Accessibility-conscious UI with responsive layouts, reduced-motion mode, and dark/light themes.
+- Accessibility-conscious UI with responsive layouts, reduced-motion mode, and dark/light themes with persisted user preference.
 
 ## Technical Highlights
 - **Frontend**: Route-based code splitting, Framer Motion micro-interactions, lazy-loaded sections, and global state slices for currency, auth, and bookings.
@@ -23,6 +23,6 @@ SmileCraft Dentistry is a multi-language dental practice platform that combines 
 ## Next Steps
 1. Initialize the frontend React/TypeScript workspace with Tailwind and Redux Toolkit scaffolding.
 2. Define Prisma schema and Express route skeletons for auth, bookings, pricing, and admin controls.
-3. Implement shared UI component library for both frontend and admin-panel with consistent theming.
+3. Implement shared UI component library for both frontend and admin-panel with consistent theming, including a theme provider that saves the user's dark/light choice to local storage and restores it on load.
 4. Integrate live exchange rate service with admin override options and local storage preference handling.
 5. Add CI workflows for linting, type checking, and automated tests.
