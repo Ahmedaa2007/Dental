@@ -1,0 +1,11 @@
+{
+  "name": "@smilecraft/theme",
+  "version": "0.1.0",
+  "main": "src/index.ts",
+  "type": "module",
+  "license": "MIT",
+  "private": true,
+  "peerDependencies": {
+    "react": "^18.0.0"
+  }
+}

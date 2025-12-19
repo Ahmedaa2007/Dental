@@ -8,7 +8,10 @@ pnpm-debug.log*
 
 # Build outputs
 /dist/
+/frontend/dist/
+/admin-panel/dist/
 /build/
+.turbo/
 .next/
 .cache/
 coverage/

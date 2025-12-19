@@ -21,8 +21,8 @@ SmileCraft Dentistry is a multi-language dental practice platform that combines 
 - **Security & Reliability**: HTTPS enforcement, SQL injection/XSS protections, session timeout policies, backup and monitoring hooks.
 
 ## Next Steps
-1. Initialize the frontend React/TypeScript workspace with Tailwind and Redux Toolkit scaffolding.
+1. Connect the frontend booking, services, and team views to live API endpoints.
 2. Define Prisma schema and Express route skeletons for auth, bookings, pricing, and admin controls.
-3. Implement shared UI component library for both frontend and admin-panel with consistent theming, including a theme provider that saves the user's dark/light choice to local storage and restores it on load.
+3. Expand the shared UI component library (cards, forms, modals) and wire Redux Toolkit for currency/auth state.
 4. Integrate live exchange rate service with admin override options and local storage preference handling.
 5. Add CI workflows for linting, type checking, and automated tests.
